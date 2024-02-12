@@ -5,6 +5,7 @@ function calculateTriangleArea() {
     const height = parseFloat(triangleHeightInput.value);
     const area = 0.5 * base * height;
     console.log(area);
+    setInnerTextById('triangle-area', area);
 }
 
 
@@ -15,6 +16,7 @@ function calculateRectangleArea() {
     const length = parseFloat(rectangleLengthInput.value);
     const area = width * length;
     console.log(area);
+    setInnerTextById('rectangle-area', area);
 }
 
 
@@ -25,6 +27,7 @@ function calculateParallelogramArea() {
     const height = parseFloat(parallelogramHeightInput.value);
     const area = base * height;
     console.log(area);
+    setInnerTextById('parallelogram-area', area);
 }
 
 
@@ -35,6 +38,7 @@ function calculateRhombusArea() {
     const d2 = parseFloat(rhombusD2Input.value);
     const area = 0.5 * d1 * d2;
     console.log(area);
+    setInnerTextById('rhombus-area', area);
 }
 
 
@@ -45,14 +49,46 @@ function calculatePentagonArea() {
     const pentagonB = parseFloat(pentagonBInput.value);
     const area = 0.5 * pentagonP * pentagonB;
     console.log(area);
+    setInnerTextById('pentagon-area', area);
+}
+
+// system Number 1:
+
+// function calculateEllipseArea() {
+//     const ellipseAInput = document.getElementById('ellipse-a');
+//     const ellipseA = parseFloat(ellipseAInput.value);
+//     const ellipseBInput = document.getElementById('ellipse-b');
+//     const ellipseB = parseFloat(ellipseBInput.value);
+//     const area = 3.1416 * ellipseA * ellipseB;
+//     console.log(area);
+// }
+
+// system Number 2:
+// ekoi kaj onekbar thakle new function e kore, pore oi function call kore parameter e id name   diye dileyi hobe
+
+function calculateEllipseArea() {
+    const ellipseA = getInputValue('ellipse-a');
+    const ellipseB = getInputValue('ellipse-b');
+    const area = 3.1416 * ellipseA * ellipseB;
+    console.log(area);
+    setInnerTextById('ellipse-area', area);
+}
+
+function getInputValue(inputFieldById) {
+    const inputField = document.getElementById(inputFieldById);
+    const inputValueText = inputField.value;
+    const inputValue = parseFloat(inputValueText);
+    return inputValue;
 }
 
 
-function calculateEllipseArea() {
-    const ellipseAInput = document.getElementById('ellipse-a');
-    const ellipseA = parseFloat(ellipseAInput.value);
-    const ellipseBInput = document.getElementById('ellipse-b');
-    const ellipseB = parseFloat(ellipseBInput.value);
-    const area = 3.1416 * ellipseA * ellipseB;
-    console.log(area);
+
+// ----------------------------------
+
+
+
+// ans section er jonno function
+function setInnerTextById(elementId, area) {
+    const element = document.getElementById(elementId);
+    element.innerText = area;
 }
