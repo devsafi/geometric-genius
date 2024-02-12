@@ -85,17 +85,17 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Rhombus</h2>
-                        <p class="text-xl">Area = w x l</p>
+                        <p class="text-xl">Area = 0.5 x d1 x d2</p>
                         <div class="mb-2">
-                            <input class="w-24 p-1 rounded-lg text-xl bg-slate-100" type="text" name=""
-                                id="triangle-base" placeholder="w">
+                            <input class="w-24 p-1 rounded-lg text-xl bg-slate-100" type="text" name="" id="rhombus-d1"
+                                placeholder="d1">
                             <span class="font-medium">cm</span>
                             <input class="ml-2 w-24 p-1 rounded-lg text-xl bg-slate-100" type="text" name=""
-                                id="triangle-height" placeholder="l">
+                                id="rhombus-d2" placeholder="d2">
                             <span class="font-medium">cm</span>
                         </div>
                         <div class="card-actions w-full">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -105,17 +105,17 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Pentagon</h2>
-                        <p class="text-xl">Area = w x l</p>
+                        <p class="text-xl">Area = 0.5 x p x b</p>
                         <div class="mb-2">
-                            <input class="w-24 p-1 rounded-lg text-xl bg-slate-100" type="text" name=""
-                                id="triangle-base" placeholder="w">
+                            <input class="w-24 p-1 rounded-lg text-xl bg-slate-100" type="text" name="" id="pentagon-p"
+                                placeholder="p">
                             <span class="font-medium">cm</span>
                             <input class="ml-2 w-24 p-1 rounded-lg text-xl bg-slate-100" type="text" name=""
-                                id="triangle-height" placeholder="l">
+                                id="pentagon-b" placeholder="b">
                             <span class="font-medium">cm</span>
                         </div>
                         <div class="card-actions w-full">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button onclick="calculatePentagonArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -125,17 +125,17 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Ellipse</h2>
-                        <p class="text-xl">Area = w x l</p>
+                        <p class="text-xl">Area = 3.1416 x a x b</p>
                         <div class="mb-2">
-                            <input class="w-24 p-1 rounded-lg text-xl bg-slate-100" type="text" name=""
-                                id="triangle-base" placeholder="w">
+                            <input class="w-24 p-1 rounded-lg text-xl bg-slate-100" type="text" name="" id="ellipse-a"
+                                placeholder="a">
                             <span class="font-medium">cm</span>
                             <input class="ml-2 w-24 p-1 rounded-lg text-xl bg-slate-100" type="text" name=""
-                                id="triangle-height" placeholder="l">
+                                id="ellipse-b" placeholder="b">
                             <span class="font-medium">cm</span>
                         </div>
                         <div class="card-actions w-full">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
